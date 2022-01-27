@@ -1,0 +1,28 @@
+title: $:/plugins/long-walk/TW5-dynamicTabs/Configuration
+alignment: tc-vertical
+arrows: yes
+fastarrows: yes
+fastLineSort: 3
+
+!!!Options for Dinamic Tabs
+
+<table>
+  <tr>
+    <th align="left">Default Tabs Menu alignment:</th>
+    <td>
+        <$radio field="alignment" value="tc-vertical" default="tc-vertical" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Vertical</$radio><br/>
+        <$radio field="alignment" value="tc-horizontal" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Horizontal</$radio>
+	<br/>
+	* The default can be overwritten with the macro request
+    </td>
+  </tr>
+  <tr>
+    <th align="left">Sort optins:</th>
+    <td>
+	<$checkbox field="arrows" checked="yes" unchecked="no" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Show sort arrows?</$checkbox><br/>
+	<$checkbox field="fastarrows" checked="yes" unchecked="no" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Show fast sort arrows?</$checkbox><br/>
+	<$edit-text field="fastLineSort" size=1 default=3 tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"/> Fast sort how many lines
+    </td>
+  </tr>
+</table>
+

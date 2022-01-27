@@ -1,0 +1,8 @@
+title: $:/plugins/long-walk/dynamicTabs/css/stylesheet
+tags: $:/tags/Stylesheet
+type: text/css
+
+/* left tab menue Stylesheet*/
+.tc-vertical .tc-tab-buttons { width: 150px; }
+.tc-horizontal .tc-tab-buttons { width: 95%; }
+input { width: auto !important; }

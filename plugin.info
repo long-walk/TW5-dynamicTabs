@@ -1,0 +1,10 @@
+{
+    "title": "$:/plugins/long-walk/TW5-dynamicTabs",
+    "description": "Dynamic Tabs Plugin for Tiddlywiki",
+    "author": "Thomas",
+    "version": "0.0.1",
+    "core-version": ">=5.2.0",
+    "source": "https://github.com/long-walk/TW5-dynamicTabs.git",
+    "plugin-type": "plugin",
+    "list": "Readme Usage Configuration"
+}

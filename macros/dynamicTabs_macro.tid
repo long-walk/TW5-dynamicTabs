@@ -1,0 +1,75 @@
+title: $:/long-walk/TW5-dynamicTabs/macro
+tags: $:/tags/Macro
+
+\define concate() $(v1)$$(v2)$
+
+\define orderUpButton()
+<$macrocall $name="orderTabs" mainTabsTiddler="""$(mainTabsTiddler)$""" direction=-1/>
+\end
+
+\define orderDownButton()
+<$macrocall $name="orderTabs" mainTabsTiddler="""$(mainTabsTiddler)$""" direction=1/>
+\end
+
+\define fastUpButton()
+<$set name=v1 value="-">
+<$set name=v2 value={{$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!fastLineSort}}>
+<$macrocall $name="orderTabs" mainTabsTiddler="""$(mainTabsTiddler)$""" direction=<<concate>>/>
+</$set>
+</$set>
+\end
+
+\define fastDownButton()
+<$macrocall $name="orderTabs" mainTabsTiddler="""$(mainTabsTiddler)$""" direction={{$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!fastLineSort}}/>
+\end
+
+\define dynamicTabs(mainTabsTiddler:"", tName:"")
+''
+@@float:right;
+
+<$button class="tc-btn-invisible">
+{{$:/core/images/edit-button}}
+<$action-sendmessage $message="tm-edit-tiddler" $param=<<selectedTab "$mainTabsTiddler$">>/>
+</$button>
+<br/>
+<$button class="tc-btn-invisible">
+{{$:/core/images/new-button}}
+<$action-sendmessage $message="tm-new-tiddler" tags="$tName$" order="."/>
+</$button>
+<br/>
+<$set name="mainTabsTiddler" value="$mainTabsTiddler$">
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!fastarrows" text="yes">
+<$button class="tc-btn-invisible" actions="<<fastUpButton>>">
+{{$:/core/images/chevron-up}}
+</$button>
+<br/>
+</$reveal>
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!arrows" text="yes">
+<$button class="tc-btn-invisible" actions="<<orderUpButton>>">
+{{$:/core/images/up-arrow}}
+</$button>
+<br/>
+</$reveal>
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!arrows" text="yes">
+<$button class="tc-btn-invisible" actions="<<orderDownButton>>">
+{{$:/core/images/down-arrow}}
+</$button>
+<br/>
+</$reveal>
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!fastarrows" text="yes">
+<$button class="tc-btn-invisible" actions="<<fastDownButton>>">
+{{$:/core/images/chevron-down}}
+</$button>
+</$reveal>
+</$set>
+@@
+''
+<<tag $tName$>>
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!alignment" text="tc-vertical">
+<$macrocall $name="tabs" tabsList="[tag[$tName$]nsort[order]]" default="[tag[$tName$]nsort[order]first[]]" class="tc-vertical" />
+</$reveal>
+<$reveal type="nomatch" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!alignment" text="tc-vertical">
+<$macrocall $name="tabs" tabsList="[tag[$tName$]nsort[order]]" default="[tag[$tName$]nsort[order]first[]]" class="tc-horizontal" />
+</$reveal>
+\end
+

@@ -1,0 +1,15 @@
+title: $:/plugins/long-walk/TW5-dynamicTabs/Readme
+
+This Plugin create a Tabs menu for Taged tiddler.
+
+!! Features include:
+
+* Direct edit the selected tiddler
+* Allow to order the Tagged tiddler with up and down buttons and fast up and down
+
+!! know Bugs
+* To fast repeting klicks causes order problems
+
+
+!! Source
+https://github.com/long-walk/TW5-dynamicTabs.git
