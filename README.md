@@ -6,7 +6,7 @@ This plugin alows to create a tabs list from Tagged tiddler
 It alows the direct edit and order the displayed tiddler
 
 To install drag and drop this link to the 
-https://github.com/long-walk/TW5-dynamicTabs/blob/master/target/TW5-dynamicTabs-0.0.1.tid
+https://github.com/long-walk/TW5-dynamicTabs/blob/master/target/index.html
 
 ## License
 
