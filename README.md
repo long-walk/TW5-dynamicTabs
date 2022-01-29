@@ -6,12 +6,12 @@ This plugin alows to create a tabs list from Tagged tiddler
 It alows the direct edit and order the displayed tiddler
 
 Example screenshot:<br/>
-<img src="https://raw.githubusercontent.com/long-walk/TW5-dynamicTabs/main/target/Screenshot.jpg?token=GHSAT0AAAAAABQZGEHY2NIOVMGHRRPDKEPGYPUXMYQ" width="60%"/>
+<img src="https://github.com/long-walk/TW5-dynamicTabs/blob/5e853b075686ef9f42652c8e6d2f5d8dc1caf423/target/Screenshot.jpg" width="60%"/>
 
 
 !! Install Plugin
 Download index.html, open it and drag and drop the plugin link to your tiddlywiki
-<a href="https://raw.githubusercontent.com/long-walk/TW5-dynamicTabs/main/target/index.html?token=GHSAT0AAAAAABQZGEHY5DUL7O4YCXC2KEZWYPUXRKA">Download</a>
+<a href="https://github.com/long-walk/TW5-dynamicTabs/blob/5e853b075686ef9f42652c8e6d2f5d8dc1caf423/target/index.html" type="text/html">Download</a>
 
 ## License
 
