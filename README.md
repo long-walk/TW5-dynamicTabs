@@ -11,7 +11,7 @@ Example screenshot:<br/>
 
 !! Install Plugin
 Download index.html, open it and drag and drop the plugin link to your tiddlywiki
-https://github.com/long-walk/TW5-dynamicTabs/blob/master/target/index.html
+<a href="https://raw.githubusercontent.com/long-walk/TW5-dynamicTabs/main/target/index.html?token=GHSAT0AAAAAABQZGEHY5DUL7O4YCXC2KEZWYPUXRKA">Download</a>
 
 ## License
 
