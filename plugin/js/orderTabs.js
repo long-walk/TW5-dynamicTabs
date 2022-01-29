@@ -25,8 +25,8 @@ exports.run = function(mainTabsTiddler, direction) {
         var selected = "";
         direction = Number(direction);
         
-        var selector = "[data-tiddler-title=\"" + mainTabsTiddler + "\"] .tc-tab-buttons button";
-        var selectedSelector = "[data-tiddler-title=\"" + mainTabsTiddler + "\"] .tc-tab-buttons .tc-tab-selected";
+        var selector = "[dynamic-tabs-title=\"" + mainTabsTiddler + "\"] .tc-tab-buttons button";
+        var selectedSelector = "[dynamic-tabs-title=\"" + mainTabsTiddler + "\"] .tc-tab-buttons .tc-tab-selected";
 
         if (document.querySelectorAll(selectedSelector)[0])
             selected = document.querySelectorAll(selectedSelector)[0].innerHTML.trim();

@@ -17,7 +17,7 @@ Return the Selected Tab
 exports.run = function(mainTabsTiddler) {
 	try {
 		var out = "";
-		var selector = "[data-tiddler-title=\"" + mainTabsTiddler + "\"] .tc-tab-buttons .tc-tab-selected";
+		var selector = "[dynamic-tabs-title=\"" + mainTabsTiddler + "\"] .tc-tab-buttons .tc-tab-selected";
 
 		if (document.querySelectorAll(selector)[0])
 			out = document.querySelectorAll(selector)[0].innerHTML.trim();

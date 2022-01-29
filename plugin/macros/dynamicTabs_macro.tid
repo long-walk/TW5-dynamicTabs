@@ -23,21 +23,25 @@ tags: $:/tags/Macro
 <$macrocall $name="orderTabs" mainTabsTiddler="""$(mainTabsTiddler)$""" direction={{$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!fastLineSort}}/>
 \end
 
-\define dynamicTabs(mainTabsTiddler:"", tName:"")
+\define dynamicTabs(mainTabsTiddler:"", tName:"", alignment:"")
 ''
 @@float:right;
 
+<$set name="mainTabsTiddler" value="$mainTabsTiddler$">
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!edit" text="yes">
 <$button class="tc-btn-invisible">
 {{$:/core/images/edit-button}}
 <$action-sendmessage $message="tm-edit-tiddler" $param=<<selectedTab "$mainTabsTiddler$">>/>
 </$button>
 <br/>
+</$reveal>
+<$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!new" text="yes">
 <$button class="tc-btn-invisible">
 {{$:/core/images/new-button}}
 <$action-sendmessage $message="tm-new-tiddler" tags="$tName$" order="."/>
 </$button>
 <br/>
-<$set name="mainTabsTiddler" value="$mainTabsTiddler$">
+</$reveal>
 <$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!fastarrows" text="yes">
 <$button class="tc-btn-invisible" actions="<<fastUpButton>>">
 {{$:/core/images/chevron-up}}
@@ -64,12 +68,24 @@ tags: $:/tags/Macro
 </$set>
 @@
 ''
-<<tag $tName$>>
+<span dynamic-tabs-title="$mainTabsTiddler$">
+<!-- if alignment -->
+<$reveal type="match" text="$alignment$" default="vertical">
+<$macrocall $name="tabs" tabsList="[tag[$tName$]nsort[order]]" default="[tag[$tName$]nsort[order]first[]]" class="tc-vertical" />
+</$reveal>
+<$reveal type="match" text="$alignment$" default="horizontal">
+<$macrocall $name="tabs" tabsList="[tag[$tName$]nsort[order]]" default="[tag[$tName$]nsort[order]first[]]" class="tc-horizontal" />
+</$reveal>
+
+<!-- else alignment -->
+<$reveal type="match" text="$alignment$" default="">
 <$reveal type="match" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!alignment" text="tc-vertical">
 <$macrocall $name="tabs" tabsList="[tag[$tName$]nsort[order]]" default="[tag[$tName$]nsort[order]first[]]" class="tc-vertical" />
 </$reveal>
 <$reveal type="nomatch" state="$:/plugins/long-walk/TW5-dynamicTabs/Configuration!!alignment" text="tc-vertical">
 <$macrocall $name="tabs" tabsList="[tag[$tName$]nsort[order]]" default="[tag[$tName$]nsort[order]first[]]" class="tc-horizontal" />
 </$reveal>
+</$reveal>
+</span>
 \end
 

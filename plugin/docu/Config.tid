@@ -1,10 +1,12 @@
 title: $:/plugins/long-walk/TW5-dynamicTabs/Configuration
 alignment: tc-vertical
+edit: yes
+new: yes
 arrows: yes
 fastarrows: yes
 fastLineSort: 3
 
-!!!Options for Dinamic Tabs
+!!!Options for Dynamic Tabs
 
 <table>
   <tr>
@@ -19,6 +21,8 @@ fastLineSort: 3
   <tr>
     <th align="left">Sort optins:</th>
     <td>
+	<$checkbox field="edit" checked="yes" unchecked="no" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Show edit button?</$checkbox><br/>
+	<$checkbox field="new" checked="yes" unchecked="no" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Show new button?</$checkbox><br/>
 	<$checkbox field="arrows" checked="yes" unchecked="no" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Show sort arrows?</$checkbox><br/>
 	<$checkbox field="fastarrows" checked="yes" unchecked="no" tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"> Show fast sort arrows?</$checkbox><br/>
 	<$edit-text field="fastLineSort" size=1 default=3 tiddler="$:/plugins/long-walk/TW5-dynamicTabs/Configuration"/> Fast sort how many lines

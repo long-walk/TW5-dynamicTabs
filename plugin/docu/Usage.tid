@@ -1,0 +1,28 @@
+title: $:/plugins/long-walk/TW5-dynamicTabs/Usage
+
+! Reload tiddlywiki
+* The plugin use javascrip so save and reload the tiddlywiki to activate the Plugin
+
+! Create a dynamic Tabs List
+
+1. create a new Tiddler
+
+2. add this macro to the text section
+
+```
+<$macrocall $name="dynamicTabs" mainTabsTiddler=<<storyTiddler>> tName="TagName"/>
+```
+
+3. replace ''~TagName'' with the tag you want to create a dynamic tab list dd
+
+!!Attribute
+|!Attribute|!Description|
+|$name|Always ``"dynamicTabs"``|
+|mainTabsTiddler|Always ``<<storyTiddler>>`` <br/>other like ``<<currentTiddler>>`` or ``{{!!title}}`` <br/>could also work but causes Problem with nesting  |
+|tName|tag you want to create a dynamic tab list|
+|alignment|Optional, overwrite the default alignment (use: horizontal or vertical)|
+
+
+! Menu
+* on the left side you get the tabs Menue to select the tiddler
+* on the right side you have three smaler icons to eddit the selected tiddler and some arrows to order the Tab List
