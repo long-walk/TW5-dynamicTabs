@@ -11,8 +11,7 @@
 
 
 ## Install Plugin
-* Download with grean button aboth -> Ddownload Zip
-* Open Zip and open target/index.htmli
+* Open this link https://long-walk.github.io/
 * Drag and Drop the plugin link to your tiddlywiki
 
 ## License
