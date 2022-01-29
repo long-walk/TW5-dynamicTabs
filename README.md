@@ -7,7 +7,8 @@
 * It alows the direct edit and order the displayed tiddler
 
 ## Example screenshot:
-<img src="https://github.com/long-walk/TW5-dynamicTabs/blob/5e853b075686ef9f42652c8e6d2f5d8dc1caf423/target/Screenshot.jpg" width="60%"/>
+<img src="https://github.com/long-walk/TW5-dynamicTabs/blob/5e853b075686ef9f42652c8e6d2f5d8dc1caf423/target/Screenshot.jpg" width="30%"/>
+<img src="https://github.com/long-walk/TW5-dynamicTabs/blob/e1ce186a138aa797ea757e13dd277f739c71f3e2/target/Screenshot_config.jpg" width="30%"/>
 
 
 ## Install Plugin
