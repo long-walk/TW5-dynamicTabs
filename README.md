@@ -11,9 +11,9 @@
 
 
 ## Install Plugin
-*Download with grean button aboth -> Ddownload Zip
+* Download with grean button aboth -> Ddownload Zip
 * Open Zip and open target/index.htmli
-* drag and drop the plugin link to your tiddlywiki
+* Drag and Drop the plugin link to your tiddlywiki
 
 ## License
 
